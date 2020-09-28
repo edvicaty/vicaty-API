@@ -42,8 +42,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:3001"],
-    credentials: true,
+    origin: "*",
+    credentials: false,
   })
 );
 
@@ -90,7 +90,7 @@ require("./passport")(app);
 const user = require("./routes/user");
 app.use("/user", user);
 
-const authRoutes = require("./routes/auth");
-app.use("/auth", authRoutes);
+// const authRoutes = require("./routes/auth");
+// app.use("/auth", authRoutes);
 
 module.exports = app;
