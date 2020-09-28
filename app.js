@@ -15,7 +15,7 @@ const flash = require("connect-flash");
 const cors = require("cors");
 
 mongoose
-  .connect("mongodb://localhost/vicaty-server", {
+  .connect(process.env.DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -78,7 +78,7 @@ app.locals.title = "Express - Generated with IronGenerator";
 // Enable authentication using session + passport
 app.use(
   session({
-    secret: "irongenerator",
+    secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true,
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
