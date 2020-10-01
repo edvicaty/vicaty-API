@@ -18,7 +18,6 @@ router.post("/project", viewAllProjects);
 router.post("/project/:projectId", getProject);
 router.post("/createdModel/:modelId", getCreatedModel);
 router.post("/element/getAll/:modelId/", getAllElements);
-
 router.post("/element/getSingle/:modelId/:elementName", getElement);
 router.post("/element/create/:modelId", createElement);
 router.post("/element/delete/:modelId/:elementName", deleteElement);

@@ -8,26 +8,7 @@ const createdModelSchema = new Schema(
     createdModelName: String,
     api: {},
     description: String,
-    elements: [
-      /*
-      @ = user input
-
-      {
-      
-      @name : {
-        elementId: ModelId+@name,
-        type: @String,
-        required: @false
-        default: @"pedrito",
-        data: []
-        }
-
-      }
-      
-      */
-    ],
-
-    // TODO: Maybe add Objects and arrays as data (beware of the CRUD though)
+    elements: [],
   },
   {
     timestamps: {

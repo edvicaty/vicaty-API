@@ -90,7 +90,4 @@ require("./passport")(app);
 const user = require("./routes/user");
 app.use("/user", user);
 
-// const authRoutes = require("./routes/auth");
-// app.use("/auth", authRoutes);
-
 module.exports = app;
